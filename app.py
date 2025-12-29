@@ -21,6 +21,6 @@ if uploaded_file:
 
     if st.button("Detect Fracture"):
         with st.spinner("Detecting..."):
-            results = model(image)
+            results = model(image, conf=0.1)
             result_image = results[0].plot()
             st.image(result_image, caption="Detection Result", use_column_width=True)
