@@ -9,7 +9,7 @@ st.write("Upload an X-ray image to detect fractures")
 
 @st.cache_resource
 def load_model():
-    return YOLO("best.pt")
+    return YOLO("yolov8n.pt")
 
 model = load_model()
 
